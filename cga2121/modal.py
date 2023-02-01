@@ -25,7 +25,7 @@ def get_device_modal(content):
     if len(devices) > 0:
         get_data_from_devices(data, devices)
 
-
+	return data
 
 
 def get_data_from_devices(data, devices):
