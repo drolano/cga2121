@@ -24,8 +24,8 @@ def get_device_modal(content):
     rows = soup.find_all('tr')
     if len(devices) > 0:
         get_data_from_devices(data, devices)
-
-	return data
+    
+    return data
 
 
 def get_data_from_devices(data, devices):
