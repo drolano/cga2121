@@ -32,12 +32,21 @@ def get_data_from_devices(data, devices):
     for device in devices:
         device_contents = device.contents
 
+        Aifon_connected = False
+
         for contador in range (3, len(device_contents[1])-3):
             fila_datos = device_contents[1].contents[contador]
             print (device_contents[1].contents[contador])
             name = fila_datos.contents[1].text
             ip_address = fila_datos.contents[5].text
             mac = fila_datos.contents[3].text
+            if name == "Aifon": 
+                Aifon_connected = True
+        
+        if Aifon_connected:
             data.append({'name': name, 'ip': ip_address, 'mac': mac})
+        else:
+            data.append({'name': name, 'ip': None, 'mac': mac})
+
 
 
