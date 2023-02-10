@@ -11,7 +11,7 @@ README = (HERE / "README.md").read_text()
 # This call to setup() does all the work
 setup(
     name="cga2121",
-    version="1.4",
+    version="1.5",
     description="Technicolor CGA2121 Gateway library",
     long_description=README,
     long_description_content_type="text/markdown",
