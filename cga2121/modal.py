@@ -45,7 +45,6 @@ def get_data_from_devices(data, devices):
                 Aifon_connected = True
                 ip_Aifon = ip_address
                 mac_Aifon = mac
-                name_Aifon = "Aifon"
        
     if Aifon_connected:
         data.append({'name': "Aifon", 'ip': ip_Aifon, 'mac': mac_Aifon})
