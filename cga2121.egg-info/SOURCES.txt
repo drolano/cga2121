@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+cga2121/__init__.py
+cga2121/modal.py
+cga2121.egg-info/PKG-INFO
+cga2121.egg-info/SOURCES.txt
+cga2121.egg-info/dependency_links.txt
+cga2121.egg-info/requires.txt
+cga2121.egg-info/top_level.txt

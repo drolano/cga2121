@@ -48,6 +48,6 @@ def get_data_from_devices(data, devices):
                 name_Aifon = "Aifon"
        
     if Aifon_connected:
-        data.append({'name': name_Aifon, 'ip': ip_Aifon, 'mac': mac_Aifon})
+        data.append({'name': "Aifon", 'ip': ip_Aifon, 'mac': mac_Aifon})
     else:
-        data.append({'name': name_Aifon, 'ip': None, 'mac': mac_Aifon})
+        data.append({'name': "Aifon", 'ip': None, 'mac': "40:9C:28:51:D6:9B"})
