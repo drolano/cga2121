@@ -29,10 +29,11 @@ def get_device_modal(content):
 
 
 def get_data_from_devices(data, devices):
+    
+    Aifon_connected = False
+    
     for device in devices:
         device_contents = device.contents
-
-        Aifon_connected = False
 
         for contador in range (3, len(device_contents[1])-3):
             fila_datos = device_contents[1].contents[contador]
@@ -42,11 +43,11 @@ def get_data_from_devices(data, devices):
             mac = fila_datos.contents[3].text
             if name == "Aifon": 
                 Aifon_connected = True
-        
-        if Aifon_connected:
-            data.append({'name': name, 'ip': ip_address, 'mac': mac})
-        else:
-            data.append({'name': name, 'ip': None, 'mac': mac})
-
-
-
+                ip_Aifon = ip_address
+                mac_Aifon = mac
+                name_Aifon = "Aifon"
+       
+    if Aifon_connected:
+        data.append({'name': name_Aifon, 'ip': ip_Aifon, 'mac': mac_Aifon})
+    else:
+        data.append({'name': name_Aifon, 'ip': None, 'mac': mac_Aifon})
