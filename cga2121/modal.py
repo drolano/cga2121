@@ -31,6 +31,7 @@ def get_device_modal(content):
 def get_data_from_devices(data, devices):
     
     Aifon_connected = False
+    AiIru_connected = False
     
     for device in devices:
         device_contents = device.contents
@@ -41,12 +42,23 @@ def get_data_from_devices(data, devices):
             name = fila_datos.contents[1].text
             ip_address = fila_datos.contents[5].text
             mac = fila_datos.contents[3].text
+
             if name == "Aifon": 
                 Aifon_connected = True
                 ip_Aifon = ip_address
                 mac_Aifon = mac
-       
+            
+            if name == "AiIru": 
+                AiIru_connected = True
+                ip_AiIru = ip_address
+                mac_AiIru = mac
+
     if Aifon_connected:
-        data.append({'name': "Aifon", 'ip': ip_Aifon, 'mac': mac_Aifon})
+        data.append({'name': "Aifon", 'ip': ip_Aifon, 'mac': "11:11:11:11:11:11"})
     else:
-        data.append({'name': "Aifon", 'ip': None, 'mac': "40:9c:28:51:d6:9b"})
+        data.append({'name': "Aifon", 'ip': None, 'mac': "11:11:11:11:11:11"})
+        
+    if AiIru_connected:
+        data.append({'name': "AiIru", 'ip': ip_AiIru, 'mac': "22:22:22:22:22:22"})
+    else:
+        data.append({'name': "AiIru", 'ip': None, 'mac': "22:22:22:22:22:22"})

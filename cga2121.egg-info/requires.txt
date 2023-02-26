@@ -1,4 +1,0 @@
-six
-html2text
-robobrowser
-Werkzeug==0.16.1
